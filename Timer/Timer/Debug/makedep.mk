@@ -48,7 +48,7 @@ hpl\pmc\hpl_sleep.c
 
 hpl\tc\hpl_tc.c
 
-hpl\usart\hpl_usart.c
+hpl\uart\hpl_uart.c
 
 hpl\xdmac\hpl_xdmac.c
 

@@ -13,8 +13,6 @@
 #include <utils.h>
 #include <hpl_tc.h>
 
-#include <hpl_usart_base.h>
-
 struct timer_descriptor TIMER_0;
 
 struct usart_sync_descriptor TARGET_IO;
@@ -37,21 +35,21 @@ static void TIMER_0_init(void)
 void TARGET_IO_PORT_init(void)
 {
 
-	gpio_set_pin_function(PA21, MUX_PA21A_USART1_RXD1);
+	gpio_set_pin_function(PA5, MUX_PA5C_UART1_URXD1);
 
-	gpio_set_pin_function(PB4, MUX_PB4D_USART1_TXD1);
+	gpio_set_pin_function(PA6, MUX_PA6C_UART1_UTXD1);
 }
 
 void TARGET_IO_CLOCK_init(void)
 {
-	_pmc_enable_periph_clock(ID_USART1);
+	_pmc_enable_periph_clock(ID_UART1);
 }
 
 void TARGET_IO_init(void)
 {
 	TARGET_IO_CLOCK_init();
+	usart_sync_init(&TARGET_IO, UART1, _uart_get_usart_sync());
 	TARGET_IO_PORT_init();
-	usart_sync_init(&TARGET_IO, USART1, _usart_get_usart_sync());
 }
 
 void system_init(void)

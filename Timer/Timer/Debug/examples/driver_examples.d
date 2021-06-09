@@ -141,7 +141,9 @@ examples/driver_examples.d examples/driver_examples.o: \
  ../hal/include/hal_timer.h ../hal/utils/include/utils_list.h \
  ../hal/include/hpl_timer.h ../hal/include/hal_usart_sync.h \
  ../hal/include/hal_io.h ../hal/include/hpl_usart_sync.h \
- ../hal/include/hpl_usart.h ../stdio_start.h \
+ ../hal/include/hpl_usart.h ../hpl/uart/hpl_uart_base.h \
+ ../hal/include/hpl_usart_async.h ../hal/include/hpl_usart.h \
+ ../hal/include/hpl_irq.h ../stdio_start.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\newlib.h \
@@ -529,6 +531,14 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMV71_DFP\2.4.182\samv71b
 ../hal/include/hpl_usart_sync.h:
 
 ../hal/include/hpl_usart.h:
+
+../hpl/uart/hpl_uart_base.h:
+
+../hal/include/hpl_usart_async.h:
+
+../hal/include/hpl_usart.h:
+
+../hal/include/hpl_irq.h:
 
 ../stdio_start.h:
 

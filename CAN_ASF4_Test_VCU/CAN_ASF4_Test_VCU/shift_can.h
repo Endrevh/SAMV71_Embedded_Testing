@@ -57,6 +57,19 @@
 
 /* etc... */
 
+/*Error-code enumerator*/
+typedef enum 
+{
+	NONE,
+	SENSORS_SUITE1_MISSING_HEARTBEAT,
+	SENSORS_SUITE2_MISSING_HEARTBEAT,
+	STATE_INDICATION_MISSING_HEARTBEAT,
+	INVERTER_MISSING_HEARTBEAT,
+	TELEMETRY_MISSING_HEARTBEAT,
+	BMS1_MISSING_HEARTBEAT,
+	BMS2_MISSING_HEARTBEAT
+}SHIFT_ERROR_CODE;
+
 /* Example of typedefs for datatypes */
 
 typedef struct
@@ -75,6 +88,12 @@ typedef struct
 {
 	bool status;
 } bool_struct_t;
+
+/*typecast SHIFT_ERROR_CODE to uint8_t and send as an array. Use the error "NONE" on indexes not used.*/
+typedef struct  
+{
+	uint8_t errors[8];
+} shift_error_struct_t;
 
 /* Variables we are going to need */
 

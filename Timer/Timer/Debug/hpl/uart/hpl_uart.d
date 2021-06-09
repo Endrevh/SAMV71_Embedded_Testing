@@ -1,4 +1,4 @@
-hpl/usart/hpl_usart.d hpl/usart/hpl_usart.o: ../hpl/usart/hpl_usart.c \
+hpl/uart/hpl_uart.d hpl/uart/hpl_uart.o: ../hpl/uart/hpl_uart.c \
  ../hal/utils/include/compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdint.h \
@@ -130,9 +130,9 @@ hpl/usart/hpl_usart.d hpl/usart/hpl_usart.o: ../hpl/usart/hpl_usart.c \
  ../hri/hri_twihs_v71b.h ../hri/hri_uart_v71b.h ../hri/hri_usart_v71b.h \
  ../hri/hri_usbhs_v71b.h ../hri/hri_utmi_v71b.h ../hri/hri_wdt_v71b.h \
  ../hri/hri_xdmac_v71b.h ../hal/utils/include/err_codes.h \
+ ../Config/hpl_uart_config.h ../Config/peripheral_clk_config.h \
  ../hal/include/hpl_usart_async.h ../hal/include/hpl_usart.h \
- ../hal/include/hpl_irq.h ../Config/hpl_usart_config.h \
- ../Config/peripheral_clk_config.h ../hal/include/hpl_usart_sync.h \
+ ../hal/include/hpl_irq.h ../hal/include/hpl_usart_sync.h \
  ../hal/include/hpl_usart.h ../hal/utils/include/utils.h \
  ../hal/utils/include/utils_assert.h
 
@@ -452,15 +452,15 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMV71_DFP\2.4.182\samv71b
 
 ../hal/utils/include/err_codes.h:
 
+../Config/hpl_uart_config.h:
+
+../Config/peripheral_clk_config.h:
+
 ../hal/include/hpl_usart_async.h:
 
 ../hal/include/hpl_usart.h:
 
 ../hal/include/hpl_irq.h:
-
-../Config/hpl_usart_config.h:
-
-../Config/peripheral_clk_config.h:
 
 ../hal/include/hpl_usart_sync.h:
 

@@ -31,8 +31,8 @@
  *
  */
 
-#ifndef _HPL_USART_USART_H_INCLUDED
-#define _HPL_USART_USART_H_INCLUDED
+#ifndef _HPL_UART_BASE_H_INCLUDED
+#define _HPL_UART_BASE_H_INCLUDED
 
 #include <hpl_usart_sync.h>
 #include <hpl_usart_async.h>
@@ -60,13 +60,14 @@ extern "C" {
  *
  * \return A pointer to set of timer helper functions
  */
-void *_usart_get_usart_sync(void);
-void *_usart_get_usart_async(void);
-void *_usart_get_usart_dma(void);
+void *_uart_get_usart_sync(void);
+void *_uart_get_usart_async(void);
+void *_uart_get_usart_dma(void);
+
 //@}
 
 #ifdef __cplusplus
 }
 #endif
 /**@}*/
-#endif /* _HPL_USART_USART_H_INCLUDED */
+#endif /* _HPL_UART_BASE_H_INCLUDED */
