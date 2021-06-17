@@ -516,7 +516,7 @@ drivers:
       can_rxf0c_f0om: blocking mode
       can_rxf0c_f0s: 6
       can_rxf0c_f0wm: 0
-      can_sidfc_lss: 2
+      can_sidfc_lss: 64
       can_tdcr_tdcf: 11
       can_tdcr_tdco: 11
       can_txbc_tfqs: 6
@@ -579,7 +579,7 @@ drivers:
       can_rxf0c_f0om: blocking mode
       can_rxf0c_f0s: 6
       can_rxf0c_f0wm: 0
-      can_sidfc_lss: 2
+      can_sidfc_lss: 64
       can_tdcr_tdcf: 11
       can_tdcr_tdco: 11
       can_txbc_tfqs: 6

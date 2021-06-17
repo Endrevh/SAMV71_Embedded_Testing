@@ -34,9 +34,19 @@ int main(void)
 	timer_add_task(&TIMER_0, &TIMER_0_task2);
 	timer_start(&TIMER_0);
 	
+	for(int i = 0; i < 12; i++)
+	{
+		gpio_set_pin_direction(GPIO(GPIO_PORTC, i), GPIO_DIRECTION_OUT);
+		gpio_set_pin_level(GPIO(GPIO_PORTC, i), true);
+	}
 	
 	/* Replace with your application code */
 	while (1) {
+		for(int i = 0; i < 12; i++)
+		{
+			gpio_toggle_pin_level(GPIO(GPIO_PORTC, i));
+			delay_ms(20);
+		}
 
 	}
 }

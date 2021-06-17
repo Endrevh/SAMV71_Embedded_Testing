@@ -37,6 +37,12 @@ int main(void)
 	gpio_set_pin_direction(PC9, GPIO_DIRECTION_OUT);
 	gpio_set_pin_direction(PC10, GPIO_DIRECTION_OUT);
 	gpio_set_pin_direction(PC11, GPIO_DIRECTION_OUT);
+	
+	for(int i = 0; i < 12; i++)
+	{
+		gpio_set_pin_level(GPIO(GPIO_PORTC, i), true);
+
+	}
 
 
 	/*
@@ -53,21 +59,22 @@ int main(void)
 	message1.dataSize = 1;
 	*/
 	
-	//add_single_filter_module_0(0x7, 0);
+	
+	//add_single_filter_module_0(10, 1);
 
-	add_range_filter_module_1(0, 5, 19);
+	add_range_filter_module_0(0, 21, 21);
 	shift_can_message_t message0;
 
 	/* Replace with your application code */
 	while (1) {
-		delay_ms(1000);
-		for(int i = 0; i < 10; i++) {
-			uint8_t data0 = i;
-			message0.id = 7; //sending with same ID
+		/*delay_ms(1000);
+		for(int i = 1; i < 13; i++) {
+			uint8_t data0 = 8;
+			message0.id = i; 
 			message0.data = &data0;
 			message0.dataSize = 1;
-			send_message_module_0(&message0);
-			delay_us(1000);
+			send_message_module_1(&message0);
+			delay_ms(50);
 		}
 		//send_message_module_0(&message0);
 		//send_message_module_1(&message1);
@@ -77,53 +84,59 @@ int main(void)
 
 
 void message_received_CAN0(shift_can_message_t message) {
-	uint8_t data = *message.data;
-	printf("Data received: %d \n", data);
-	gpio_toggle_pin_level(PC11);
-
-} 
-
-void message_received_CAN1(shift_can_message_t message) {
-	uint8_t data = *message.data;
+	uint8_t id = message.id;
 	//printf("Data received: %d \n", data);
 
 	//gpio_toggle_pin_level(PC11);
-	switch (data)
+	switch (id)
 	{
-		case 0:
+		case 1:
 			gpio_toggle_pin_level(PC0);
 			break;
-		case 1:
+		case 2:
 			gpio_toggle_pin_level(PC1);
 			break;
-		case 2:
+		case 3:
 			gpio_toggle_pin_level(PC2);
 			break;
-		case 3:
+		case 4:
 			gpio_toggle_pin_level(PC3);
 			break;
-		case 4:
+		case 5:
 			gpio_toggle_pin_level(PC4);
 			break;
-		case 5:
+		case 6:
 			gpio_toggle_pin_level(PC5);
 			break;
-		case 6:
+		case 7:
 			gpio_toggle_pin_level(PC6);
 			break;
-		case 7:
+		case 8:
 			gpio_toggle_pin_level(PC7);
 			break;
-		case 8:
-			gpio_toggle_pin_level(PC8);
-			break;
 		case 9:
+			gpio_toggle_pin_level(PC8);
+			break;	
+		case 10:				
 			gpio_toggle_pin_level(PC9);
-			break;		
+			break;
+		case 11:
+			gpio_toggle_pin_level(PC10);
+			break;
+		case 12:
+			gpio_toggle_pin_level(PC11);
+			break;
 		default:
 		/* Your code here */
 		break;
 	};
+}
+
+void message_received_CAN1(shift_can_message_t message) {
+	uint8_t data = *message.data;
+	printf("Data received: %d \n", data);
+	gpio_toggle_pin_level(PC11);
+
 }
 
 /*void message_received(shift_can_message_t message) {
