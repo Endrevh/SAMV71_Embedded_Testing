@@ -104,14 +104,14 @@ void system_init(void)
 {
 	init_mcu();
 
-	_pmc_enable_periph_clock(ID_PIOB);
+	_pmc_enable_periph_clock(ID_PIOE);
 
 	/* Disable Watchdog */
 	hri_wdt_set_MR_WDDIS_bit(WDT);
 
-	/* GPIO on PB0 */
+	/* GPIO on PE1 */
 
-	gpio_set_pin_level(CAN_SILENT0,
+	gpio_set_pin_level(SILENT0,
 	                   // <y> Initial level
 	                   // <id> pad_initial_level
 	                   // <false"> Low
@@ -119,13 +119,13 @@ void system_init(void)
 	                   false);
 
 	// Set pin direction to output
-	gpio_set_pin_direction(CAN_SILENT0, GPIO_DIRECTION_OUT);
+	gpio_set_pin_direction(SILENT0, GPIO_DIRECTION_OUT);
 
-	gpio_set_pin_function(CAN_SILENT0, GPIO_PIN_FUNCTION_OFF);
+	gpio_set_pin_function(SILENT0, GPIO_PIN_FUNCTION_OFF);
 
-	/* GPIO on PB1 */
+	/* GPIO on PE2 */
 
-	gpio_set_pin_level(CAN_SILENT1,
+	gpio_set_pin_level(SILENT1,
 	                   // <y> Initial level
 	                   // <id> pad_initial_level
 	                   // <false"> Low
@@ -133,9 +133,9 @@ void system_init(void)
 	                   false);
 
 	// Set pin direction to output
-	gpio_set_pin_direction(CAN_SILENT1, GPIO_DIRECTION_OUT);
+	gpio_set_pin_direction(SILENT1, GPIO_DIRECTION_OUT);
 
-	gpio_set_pin_function(CAN_SILENT1, GPIO_PIN_FUNCTION_OFF);
+	gpio_set_pin_function(SILENT1, GPIO_PIN_FUNCTION_OFF);
 
 	TIMER_0_init();
 

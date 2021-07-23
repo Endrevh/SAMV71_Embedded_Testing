@@ -569,6 +569,18 @@ drivers:
         configuration:
           mcan_clock_source: Programmable Clock Controller 5 (PMC_PCK5)
 pads:
+  SILENT0:
+    name: PE1
+    definition: Atmel:SAMV71B_Drivers:0.0.1::ATSAMV71Q21B-CB::pad::PE1
+    mode: Digital output
+    user_label: SILENT0
+    configuration: null
+  SILENT1:
+    name: PE2
+    definition: Atmel:SAMV71B_Drivers:0.0.1::ATSAMV71Q21B-CB::pad::PE2
+    mode: Digital output
+    user_label: SILENT1
+    configuration: null
   PC14:
     name: PC14
     definition: Atmel:SAMV71B_Drivers:0.0.1::ATSAMV71Q21B-CB::pad::PC14
@@ -580,18 +592,6 @@ pads:
     definition: Atmel:SAMV71B_Drivers:0.0.1::ATSAMV71Q21B-CB::pad::PC12
     mode: Peripheral IO
     user_label: PC12
-    configuration: null
-  CAN_SILENT1:
-    name: PB1
-    definition: Atmel:SAMV71B_Drivers:0.0.1::ATSAMV71Q21B-CB::pad::PB1
-    mode: Digital output
-    user_label: CAN_SILENT1
-    configuration: null
-  CAN_SILENT0:
-    name: PB0
-    definition: Atmel:SAMV71B_Drivers:0.0.1::ATSAMV71Q21B-CB::pad::PB0
-    mode: Digital output
-    user_label: CAN_SILENT0
     configuration: null
   PB2:
     name: PB2

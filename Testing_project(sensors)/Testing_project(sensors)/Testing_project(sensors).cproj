@@ -128,9 +128,9 @@
           <AcmeProjectActionInfo Action="File" Source="hri/hri_wdt_v71b.h" IsConfig="false" Hash="smIdSPuIDUy8nKYmXGIlGA" />
           <AcmeProjectActionInfo Action="File" Source="hri/hri_xdmac_v71b.h" IsConfig="false" Hash="0A2yMatWKCn1HiuGTRb8SQ" />
           <AcmeProjectActionInfo Action="File" Source="main.c" IsConfig="false" Hash="k0AH7j+BrmdFhBPzCCMptA" />
-          <AcmeProjectActionInfo Action="File" Source="driver_init.c" IsConfig="false" Hash="LcOfmWvky+6vqEInTmK0Jg" />
+          <AcmeProjectActionInfo Action="File" Source="driver_init.c" IsConfig="false" Hash="+0/Mv0bJ+Yo6GC48XAyrwQ" />
           <AcmeProjectActionInfo Action="File" Source="driver_init.h" IsConfig="false" Hash="HCff13LxRtX/GDrCSp6vNg" />
-          <AcmeProjectActionInfo Action="File" Source="atmel_start_pins.h" IsConfig="false" Hash="IMYtqlFrxpaD2z7h/DFvlw" />
+          <AcmeProjectActionInfo Action="File" Source="atmel_start_pins.h" IsConfig="false" Hash="/+6Giu0Liyr59HKrUxZKCw" />
           <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.h" IsConfig="false" Hash="g9N15KysQWZ/fMIyMDYiQw" />
           <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.c" IsConfig="false" Hash="Ixeop/P4F0NwbJBGmKFt2w" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_timer.h" IsConfig="false" Hash="5pZVthtMl40VMvofOld2ng" />

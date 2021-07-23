@@ -2,7 +2,7 @@
 #include "shift_can.h"
 
 #define HEARTBEAT_INTERVAL 10
-#define LED_A GPIO(GPIO_PORTC, 0)
+#define LED_A GPIO(GPIO_PORTC, 2)
 
 struct timer_task TIMER_0_sensors_suite1_heartbeat;
 
