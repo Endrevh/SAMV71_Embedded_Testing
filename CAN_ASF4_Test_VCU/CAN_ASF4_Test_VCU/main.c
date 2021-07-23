@@ -63,11 +63,11 @@ int main(void)
 	//add_single_filter_module_0(10, 1);
 
 	add_range_filter_module_0(0, 21, 21);
-	shift_can_message_t message0;
+	shift_can_message_t message;
 
 	/* Replace with your application code */
 	while (1) {
-		/*delay_ms(1000);
+		/*
 		for(int i = 1; i < 13; i++) {
 			uint8_t data0 = 8;
 			message0.id = i; 
@@ -76,6 +76,14 @@ int main(void)
 			send_message_module_1(&message0);
 			delay_ms(50);
 		}
+		*/
+		delay_ms(1000);
+
+		uint8_t data = 8;
+		message.id = 5;
+		message.data = &data;
+		message.dataSize = 1;
+		send_message_module_1(&message);
 		//send_message_module_0(&message0);
 		//send_message_module_1(&message1);
 		//printf("Message sent \n");

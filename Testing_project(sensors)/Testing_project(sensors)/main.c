@@ -19,11 +19,15 @@ int main(void)
 	/* Initializes MCU, drivers and middleware */
 	atmel_start_init();
 	
+	init_can_module();
+	
 	subsystem_setup();
 	
 	gpio_set_pin_direction(LED_A, GPIO_DIRECTION_OUT);
 	gpio_set_pin_level(LED_A, true);	
-
+	
+	add_single_filter_module_0(ID_CHANGE_POD_STATE, 0);
+	
 	/* Replace with your application code */
 	while (1) {
 	}
