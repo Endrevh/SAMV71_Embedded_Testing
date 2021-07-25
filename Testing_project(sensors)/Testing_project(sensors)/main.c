@@ -75,9 +75,7 @@ void subsystem_timer_setup()
 void subsystem_setup()
 {
 	/*Some setup-code here*/
-	
-	init_can_module();
-	
+		
 	subsystem_timer_setup();
 	current_state = INITIALIZING_LV;
 	/*Some more setup-code here*/

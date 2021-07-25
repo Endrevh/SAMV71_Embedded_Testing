@@ -371,7 +371,7 @@ int32_t _can_async_set_filter(struct _can_async_device *const dev, uint8_t index
 		}
 		sf->S0.val       = filter->mask;
 		sf->S0.bit.SFID1 = filter->id;
-		sf->S0.bit.SFT   = _CAN_SFT_CLASSIC;
+		sf->S0.bit.SFT   = _CAN_SFT_DUAL;
 		sf->S0.bit.SFEC  = _CAN_SFEC_STF0M;
 	} else if (fmt == CAN_FMT_EXTID) {
 		if (filter == NULL) {
